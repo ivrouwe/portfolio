@@ -353,6 +353,10 @@ a:hover, a:focus {
   background-color: #1AB3AE;
 }
 
+.toolbar li a:not(.view-or-print-anchor) {
+  padding-top: 42px;
+  padding-bottom: 42px;
+}
 /* 4 - STATE */
 
 @media (min-width: 960px) {
@@ -500,11 +504,6 @@ nav li:last-of-type a {
 
 .print-a-document > header, .print-a-document #documents > h3, .print-a-document > footer {
   display: none; }
-
-.print-a-document .launches-print-dialog {
-  line-height: 3;
-  text-decoration: underline;
-}
 
 .print-a-document .launches-print-dialog:hover, .print-a-document .launches-print-dialog:focus {
   cursor: pointer;

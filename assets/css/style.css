@@ -1,0 +1,535 @@
+/* 1 - BASE */
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both; }
+
+.visually-hidden, .IvanVrouweIGNORE-visually-hidden {
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px 1px 1px 1px);
+  /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px); }
+
+*, *:before, *:after {
+  box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0; }
+
+address {
+  font-style: normal; }
+
+dl {
+  margin: 0; }
+
+header svg {
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
+header dd {
+  margin: 0; }
+
+figure {
+  margin: 0; }
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0; }
+
+ins {
+  text-decoration: none; }
+
+nav > ul, nav > ol {
+  margin: 0;
+  padding: 0;
+  list-style-type: none; }
+
+li {
+  display: inline-block; }
+
+p {
+  margin: 0; }
+
+pre {
+  font-family: sans-serif; }
+
+/*ul, ol {margin: 0;}*/
+/* TYPOGRAPHY */
+/*72px, 60px, 48px, 36px, 24px, 21px, 18px, 16px, 12px, 11px, 10px*/
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 150%;
+  /*24px*/
+  line-height: 1.5em;
+  /*36px*/
+}
+
+h1, h2, h3, h4, p, li, a, address, dt, dd, figcaption {
+  margin-bottom: 24px; }
+
+body > header p, body > header address {
+  margin-bottom: 0; }
+
+h1 {
+  font-size: 2.5em;
+  /*60px/24px*/
+  line-height: 1.2;
+  /*72px/60px*/ }
+
+h2 {
+  font-size: 1.5em;
+  /*36px/24px*/
+  line-height: 1;
+  /*36px/36px*/ }
+
+h3 {
+  font-size: 1em;
+  /*24px/24px*/
+  line-height: 1.5;
+  /*36px/24px*/ }
+
+h4, p, li, a, button, .logo, address, dt, dd {
+  font-size: 0.875em;
+  /*21px/24px*/
+  line-height: 1.7142857143;
+  /*36px/21px*/ }
+
+body > header, .tagline, body > footer {
+  text-align: center; }
+
+a[href^="mailto:"] {
+  word-wrap: break-word; }
+
+/* COLOUR */
+body {
+  background-color: lightgrey; }
+
+main {
+  background-color: grey; }
+
+a:link, a:visited, a:active {
+  color: #000; }
+
+section, aside {
+  overflow: hidden;
+}
+
+/* 2 - LAYOUT */
+
+body > header, body > footer {
+  width: 100vw;
+  overflow: hidden; }
+
+body > header {
+  padding: 24px 0 0 0;
+  position: relative;
+}
+
+body > footer {
+  padding: 24px 0;
+}
+
+main {
+  margin-top: 24px;
+  padding: 24px;
+  overflow: hidden; }
+
+main > section, main > aside {
+  margin-bottom: 24px; }
+
+body>footer p {
+  margin: 0;
+}
+
+/* 3 - MODULES */
+
+.profile-picture {
+  height: 80px;
+  display: inline-block;
+  overflow: hidden;
+  text-align: center;
+  vertical-align: top;
+  border-radius: 50%; }
+
+.profile-picture img {
+  height: inherit; }
+
+.major-navigation-skip-link, .page-top-skip-link {
+  margin: 0;
+  padding: 24px 48px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 0;
+  text-decoration: none;
+}
+
+.major-navigation-skip-link:before {
+  content: "\2630";
+  height: 24px;
+  width: 24px;
+  display: block;
+  font-size: 48px;
+}
+
+.major-navigation-skip-link:after {
+  content: "Menu";
+}
+
+.page-top-skip-link:before {
+    content: "\00D7";
+    height: 52px;
+    width: 52px;
+    vertical-align: top;
+    border: solid 2px #000;
+    border-radius: 50%;
+    display: block;
+    font-size: 48px;
+    line-height: 1;
+    background-color: #1AB3AE;
+    background-color: rgba(26, 179, 174, 0.61);
+}
+
+nav {
+  background-color: lightgrey;
+  /*background-color: rgba(75, 0, 130, 0.1);*/
+  color: #fff;
+}
+
+  nav li {
+    width: 100%;
+    margin-bottom: 0;
+    display: block;
+    float: none; }
+
+nav>ul a {
+  width: 100%;
+  margin: 24px 0;
+  padding: 24px;
+  border: 1px solid #000;
+  display: inline-block;
+  text-align: center;
+  background-color: #157EBD;
+  color: #fff;
+  line-height: 60px; }
+
+.project {
+  margin-bottom: 24px;
+  padding: 24px;
+  border-radius: 6px 6px 0 0;
+  background-color: #4B0082;
+  background-color: rgba(75, 0, 130, 0.1); }
+
+.project h1 {
+  background-color: #742865;
+  border-radius: 6px 6px 0 0;
+  margin: -24px -24px 24px -24px;
+  padding: 24px;
+  text-align: right; }
+
+.document {
+  margin-bottom: 24px;
+  padding: 24px;
+  border-radius: 6px;
+  background-color: lightgrey; }
+
+.document h1 {
+  text-align: center; }
+
+.document address {
+  text-align: center; }
+
+.document dt {
+  font-weight: 600;
+}
+
+.resume-skillset-supplementary-information dt:after {
+  content: ":"; }
+
+.resume-skillset-supplementary-information dd:before {
+  content: "- "; }
+
+.location-listing:before {
+  content: "from "; }
+
+.social-media-link, .Ivan {
+  height: inherit;
+  margin-bottom: 0;
+  display: inline-block;
+  vertical-align: top;
+  overflow: hidden;
+}
+
+.social-media-accounts, .IvanVrouweIGNORE-social-media-accounts {
+  margin-top: 24px;
+  margin-bottom: 24px; }
+
+.social-media-accounts dl > dt, .social-media-accounts dl > dd, .IvanVrouweIGNORE-social-media-accounts dl > dt, .IvanVrouweIGNORE-social-media-accounts dl > dd {
+  display: inline-block; }
+
+.logo, .IvanVrouweIGNORE-logo {
+  display: inline;
+  width: inherit; }
+
+a:hover, a:focus {
+  opacity: 0.5; }
+
+.snapshots {
+  display: block;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 24px; }
+
+.snapshot {
+  width: 420px;
+  margin-right: 24px;
+  margin-bottom: 24px;
+  margin-top: auto;
+  margin-bottom: auto;
+  border-radius: 0 0 6px 6px;
+  display: block;
+  float: left;
+  overflow: hidden;
+  background-color: transparent;
+  background-color: rgba(0, 0, 0, 0.2);
+  text-align: center; }
+
+.snapshot:last-of-type {
+  margin-right: 0; }
+
+.snapshot img {
+  max-width: 372px;
+  margin: 24px;
+  text-align: center; }
+
+.snapshot figcaption {
+  margin-bottom: 0;
+  padding: 24px 0;
+  border-radius: 0 0 6px 6px;
+  background-color: grey; }
+
+.toolbar {
+  padding-left: 0;
+  display: block;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center; }
+
+.toolbar li {
+  margin-left: auto;
+  margin-right: auto;
+  display: block; }
+
+/*  .toolbar li:after {
+    content: "";
+    background-color: darkgrey;
+  }
+
+  .toolbar li:first-of-type:after {
+    content: "";
+  }*/
+
+.toolbar a, .print-a-document .launches-print-dialog {
+  width: 100%;
+  margin: auto;
+  padding: 24px;
+  border: 1px #000 solid;
+  border-radius: 6px;
+  display: block;
+  background-color: #1AB3AE;
+}
+
+/* 4 - STATE */
+
+@media (min-width: 960px) {
+  body > header > section, main {
+    width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+  nav ul {
+    display: inline-block;
+    text-align: center;
+    vertical-align: top;
+  }
+
+  nav li {
+    margin: 0;
+    display: inline-block
+  }
+
+  nav li {
+    float: left; }
+
+    nav > ul a {
+      margin: 24px 24px 24px 0;
+    }
+
+  .toolbar {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+            flex-direction: row; }
+
+  .toolbar li {
+    width: 272px;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: 24px;
+    float: left; }
+
+  .toolbar li:last-of-type {
+    margin-right: 0; } 
+
+  .toolbar li:after {
+    display: none;
+  }
+
+}
+@media (min-width: 656px) {
+  .document address {
+    text-align: right; 
+  }
+
+  .
+}
+@media (min-width: 500px) {
+  .toolbar {
+    float: left;
+  }
+}
+
+@media (max-width: 398px) {
+  .IvanVrouweIGNORE-social-media-accounts dl > dd {
+    width: 25%;
+    display: block;
+    float: left;
+    text-align: center;
+  }
+}
+@media (min-width: 382px) {
+  h1 {
+    font-size: 3em;
+    /*72px/24px*/
+    line-height: 1;
+    /*72px/72px*/ }
+
+  h2 {
+    font-size: 2em;
+    /*48px/24px*/
+    line-height: 1.5;
+    /*72px/48px*/ }
+
+  h3 {
+    font-size: 1.5em;
+    /*36px/24px*/
+    line-height: 1;
+    /*36px/36px*/ }
+
+  h4, p, li, a, button,.logo, address, dt, dd {
+    font-size: 1em;
+    /*24px/24px*/
+    line-height: 1.5;
+    /*36px/24px*/ } }
+@media (min-width: 368px) {
+  .toolbar li {
+    width: 272px; } }
+
+@media (max-width: 320px) {
+  header svg {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .social-media-accounts dl > dd {
+    width: 25%;
+    display: block;
+    float: left;
+    text-align: center;
+  }
+}
+
+@media (min-width: 304px) {
+  nav li {
+    width: initial;
+  }
+
+  nav>ul a {
+    width: 304px; }
+}
+
+/*nav#major-navigation {
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px 1px 1px 1px);
+  /* IE6, IE7 */
+  /*clip: rect(1px, 1px, 1px, 1px);*/
+/*}*/
+
+nav#major-navigation:target {
+    position: relative !important;
+    height: initial;
+    width: initial;
+    clip: initial;
+}
+
+nav>ul a:hover, nav>ul a:focus {
+  background-color: #000;
+  color: #fff;
+  opacity: 1; }
+
+nav li:last-of-type a {
+  margin-right: 0; }
+
+.print-a-document > header, .print-a-document #documents > h3, .print-a-document > footer {
+  display: none; }
+
+.print-a-document .launches-print-dialog {
+  line-height: 3;
+  text-decoration: underline;
+}
+
+.print-a-document .launches-print-dialog:hover, .print-a-document .launches-print-dialog:focus {
+  cursor: pointer;
+  opacity: 0.5; }
+
+@media print {
+  .print-a-document {
+    font-size: 100%;
+  }
+
+  .document {
+    padding-top: 0;
+  }
+
+  .print-a-document, .print-a-document main, .print-a-document #documents, .print-a-document .document {
+    background-color: #fff; }
+
+  .print-a-document .document h1, .print-a-document .IvanVrouweIGNORE-social-media-accounts, .print-a-document .toolbar {
+    display: none; }
+
+  .print-a-document a {
+    text-decoration: none; 
+  }
+
+  .print-a-document .document address, .print-a-document .resume-skillset-supplementary-information {
+    text-align: right;
+  }
+}

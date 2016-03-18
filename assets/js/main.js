@@ -26,7 +26,7 @@
 			printButton.addEventListener("click", launchPrintDialog);
 	}
 
-	if (window.location.hash == "#print") {
+	if (window.location.hash === "#print") {
 		window.scroll(0, document.body.scrollHeight);
 		launchPrintDialog();
 	}

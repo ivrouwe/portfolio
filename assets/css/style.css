@@ -529,6 +529,6 @@ nav li:last-of-type a {
   }
 
   .print-a-document .document address, .print-a-document .resume-skillset-supplementary-information {
-    text-align: right;
+    text-align: left;
   }
 }
